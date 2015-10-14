@@ -1,0 +1,8 @@
+#Instala somente skype for business
+\\group-backup01\OFFICE$\setup.exe /configure \\group-backup01\OFFICE$\instala_skypeForBusiness.xml
+
+instala office 365 business premium
+\\group-backup01\OFFICE$\setup.exe /configure \\group-backup01\OFFICE$\instala_O365BP.xml
+
+instala office 365 Enterprise
+\\group-backup01\OFFICE$\setup.exe /configure \\group-backup01\OFFICE$\instala_O365Enterprise.xml
