@@ -1,0 +1,22 @@
+.
+   1. Abra o executável lpd.exe
+   2. Conectar ao controlador de domínio usando a porta 389
+   3. Autenticar no controlador de domínio no menu Connection e clicar em Bind
+   4. Informe usuário e senha do administrador
+   5. Acessar Controls através do menu Options.
+   6. Em Controls selecionar Return deleted objects na lista Load Predefined.
+   7. Selecionar Tree através do menu View.
+   8. Selecionar o domínio através do menu Tree View.
+          * ex: DC=contoso,DC=corp
+          * Na arvore do domínio, selecionar CN=Deleted Objects
+          * Expandir CN=Deleted Objects e selecionar o objetivo que será restaurado.
+          * Ex: Carlos
+   9. No objeto que será restaurado, clique em Modify.
+  10. Em Edit Entry Attribute, digitar isDeleted e em Operation selecionar Delete, clique no Enter
+  11. Em Edit Entry Attribute, digitar distinguishedName e em Values digitar o DN do objeto e em Operation selecionar Replace, clique no Enter.
+         1. Ex: Carlos
+         2. Ex do DN: CN=Carlos,CN=users,DC=contoso,DC=corp
+  12. Assegurar que as opções Synchronous e Extended estão selecionadas, clique em Run
+  13. Através da ferramenta Active Directory Users and Computers resetar a senha do usuário restaurado.
+  14. Definir uma senha para a conta.
+  15. Através da ferramenta Active Directory Users and Computers habilitar a conta do usuário restaurado.
