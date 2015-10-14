@@ -6,3 +6,22 @@ instala office 365 business premium
 
 instala office 365 Enterprise
 \\group-backup01\OFFICE$\setup.exe /configure \\group-backup01\OFFICE$\instala_O365Enterprise.xml
+
+copiar arquivos com log
+robocopy \\origem\ \\destino\ /E /ZB /COPYALL /R:0 /W:0 /V /NP /ETA /LOG:c:\nome_do_log.log
+
+criar pasta
+ForEach ($Folder in $Folders) { New-Item $Folder.samaccountname -type directory } 
+
+Winproxy
+proxycfg.exe verifica as configuracoes do winhttpproxy
+proxycfg.exe -u
+
+Verifica conexões abertas por porta
+netstat -no | find ":80"
+
+Rotas
+route -f
+route add 192.168.0.0 mask 255.255.0.0 192.168.0.4 -p
+route add 0.0.0.0 mask 0.0.0.0 10.10.10.62 -p
+
