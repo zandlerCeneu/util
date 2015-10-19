@@ -25,3 +25,5 @@ route -f
 route add 192.168.0.0 mask 255.255.0.0 192.168.0.4 -p
 route add 0.0.0.0 mask 0.0.0.0 10.10.10.62 -p
 
+#Lista dez maiores arquivos de pasta
+Dir $home -recurse -ea SilentlyContinue | Sort-Object Length -Descending | Select-Object -first 10 | Select-Object FullName, Length, LastWriteTime
